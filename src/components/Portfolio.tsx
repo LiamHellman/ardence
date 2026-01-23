@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FiHome } from 'react-icons/fi'
+import { LuChefHat } from 'react-icons/lu'
 
 const items = new Array(8).fill(0).map((_,i)=>({
   id: i+1,
@@ -14,7 +16,8 @@ export default function Portfolio({ onChange }: PortfolioProps){
 
   return (
     <section className="portfolio">
-      <button className="back-btn" onClick={() => onChange('home')}>← Back</button>
+      <button className="back-btn home-btn" onClick={() => onChange('home')}><FiHome /></button>
+      <button className="back-btn" onClick={() => onChange('about')}><LuChefHat /></button>
       <div className="grid-4col">
         {items.map(item=> (
           <div className="card-clickable" key={item.id} onClick={() => setSelectedId(item.id)}>
