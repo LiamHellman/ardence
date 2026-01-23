@@ -1,4 +1,3 @@
-import React from 'react'
 import { PiBowlFood } from 'react-icons/pi'
 import { LuChefHat } from 'react-icons/lu'
 

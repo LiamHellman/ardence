@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FiHome } from 'react-icons/fi'
 import { LuChefHat } from 'react-icons/lu'
 

@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { FiHome } from 'react-icons/fi'
 import { PiBowlFood } from 'react-icons/pi'
 
@@ -7,15 +6,6 @@ interface AboutProps {
 }
 
 export default function About({ onChange }: AboutProps){
-  const [activeSlide, setActiveSlide] = useState(0)
-  const slides = [
-    { src: '/ardence/service.jpg', name: 'Services' },
-    { src: '/ardence/valeurs.jpg', name: 'Values' }
-  ]
-
-  const nextSlide = () => {
-    setActiveSlide((activeSlide + 1) % slides.length)
-  }
 
   return (
     <section className="about">

@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface HeaderProps {
   active: string
   onChange: (tab: string) => void
