@@ -1,16 +1,28 @@
+import { useState } from 'react'
 import { FiHome } from 'react-icons/fi'
 import { PiBowlFood } from 'react-icons/pi'
+import { HiOutlineMenu } from 'react-icons/hi'
 
 interface AboutProps {
   onChange: (tab: string) => void
 }
 
 export default function About({ onChange }: AboutProps){
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <section className="about">
-      <button className="back-btn home-btn" onClick={() => onChange('home')}><FiHome /></button>
-      <button className="back-btn" onClick={() => onChange('portfolio')}><PiBowlFood /></button>
+      <div className="menu-container">
+        <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <HiOutlineMenu />
+        </button>
+        {isMenuOpen && (
+          <div className="dropdown">
+            <button className="dropdown-item" onClick={() => onChange('home')}><FiHome /></button>
+            <button className="dropdown-item" onClick={() => onChange('portfolio')}><PiBowlFood /></button>
+          </div>
+        )}
+      </div>
       
       <div className="chefs-container">
         <img src="/mathis.jpg" alt="Mathis Gaudet" className="chef-img" />
