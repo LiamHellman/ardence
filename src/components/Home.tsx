@@ -16,10 +16,11 @@ export default function Home({ onChange }: HomeProps){
       style={{ backgroundImage: 'url(/logo.jpg)' }}
     >
       <div className="menu-container">
-        <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <HiOutlineMenu />
-        </button>
-        {isMenuOpen && (
+        {!isMenuOpen ? (
+          <button className="menu-btn" onClick={() => setIsMenuOpen(true)}>
+            <HiOutlineMenu />
+          </button>
+        ) : (
           <div className="dropdown">
             <button className="dropdown-item" onClick={() => onChange('about')}><LuChefHat /></button>
             <button className="dropdown-item" onClick={() => onChange('portfolio')}><PiBowlFood /></button>

@@ -13,10 +13,11 @@ export default function About({ onChange }: AboutProps){
   return (
     <section className="about">
       <div className="menu-container">
-        <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <HiOutlineMenu />
-        </button>
-        {isMenuOpen && (
+        {!isMenuOpen ? (
+          <button className="menu-btn" onClick={() => setIsMenuOpen(true)}>
+            <HiOutlineMenu />
+          </button>
+        ) : (
           <div className="dropdown">
             <button className="dropdown-item" onClick={() => onChange('home')}><FiHome /></button>
             <button className="dropdown-item" onClick={() => onChange('portfolio')}><PiBowlFood /></button>
