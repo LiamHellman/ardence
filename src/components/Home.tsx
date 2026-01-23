@@ -9,7 +9,7 @@ export default function Home({ onChange }: HomeProps){
   return (
     <section 
       className="home full-screen"
-      style={{ backgroundImage: 'url(/ardence/logo.jpg)' }}
+      style={{ backgroundImage: 'url(/logo.jpg)' }}
     >
       <div className="top-buttons">
         <button className="top-btn btn-about" onClick={() => onChange('about')}><LuChefHat /></button>

@@ -4,7 +4,7 @@ import { LuChefHat } from 'react-icons/lu'
 
 const items = new Array(8).fill(0).map((_,i)=>({
   id: i+1,
-  src: `/ardence/images/${i+1}.jpg`,
+  src: `/images/${i+1}.jpg`,
 }))
 
 interface PortfolioProps {
@@ -30,7 +30,7 @@ export default function Portfolio({ onChange }: PortfolioProps){
         <div className="modal" onClick={() => setSelectedId(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelectedId(null)}>×</button>
-            <img src={`/ardence/images/${selectedId}.jpg`} alt="Event" />
+            <img src={`/images/${selectedId}.jpg`} alt="Event" />
           </div>
         </div>
       )}

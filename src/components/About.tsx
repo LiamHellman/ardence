@@ -13,12 +13,12 @@ export default function About({ onChange }: AboutProps){
       <button className="back-btn" onClick={() => onChange('portfolio')}><PiBowlFood /></button>
       
       <div className="chefs-container">
-        <img src="/ardence/mathis.jpg" alt="Mathis Gaudet" className="chef-img" />
-        <img src="/ardence/julien.jpg" alt="Julien Ricoul" className="chef-img" />
+        <img src="/mathis.jpg" alt="Mathis Gaudet" className="chef-img" />
+        <img src="/julien.jpg" alt="Julien Ricoul" className="chef-img" />
       </div>
       <div className="frames-row">
-        <div className="frame" style={{ backgroundImage: 'url(/ardence/service.jpg)' }}></div>
-        <div className="frame" style={{ backgroundImage: 'url(/ardence/valeurs.jpg)' }}></div>
+        <div className="frame" style={{ backgroundImage: 'url(/service.jpg)' }}></div>
+        <div className="frame" style={{ backgroundImage: 'url(/valeurs.jpg)' }}></div>
       </div>
     </section>
   )
