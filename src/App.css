@@ -14,7 +14,7 @@ body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:var(--b
 .menu-container{position:fixed;top:20px;right:20px;z-index:100}
 .menu-btn{background:#731817;color:white;border:none;padding:12px 24px;border-radius:20px;cursor:pointer;font-size:16px;font-weight:500;transition:all 0.3s;font-family:'URW Chancery L', cursive}
 .menu-btn:hover{background:#731817;transform:scale(1.05)}
-.dropdown{display:flex;gap:12px;flex-direction:row}
+.dropdown{display:flex;gap:12px;flex-direction:column}
 .dropdown-item{background:#731817;color:white;border:none;padding:12px 24px;border-radius:20px;cursor:pointer;font-size:16px;font-weight:500;font-family:'URW Chancery L', cursive;transition:all 0.2s}
 .dropdown-item:hover{background:#8b2a1a;transform:scale(1.05)}
 
