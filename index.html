@@ -1,13 +1,281 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ardence</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ardence - Services traiteur, prestation à domicile et événementiel. Une expérience culinaire raffinée pour tous vos moments spéciaux.">
+    <meta name="theme-color" content="#722F37">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Ardence | Traiteur & Chef à Domicile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Pastille/Ardence-logo_Ardence-Icone_Bourgogne.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">
+                <img src="images/Pastille/Ardence-logo_Ardence-Icone_Bourgogne.png" alt="Ardence">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contactez-nous</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <img src="images/Logo coloris/Ardence-logo_Ardence_Bourgogne.png" alt="Ardence" class="hero-logo">
+            <p class="hero-tagline">Coucou Les Copinous</p>
+            <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <p class="section-subtitle">Une expérience de folichon</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Miam à domicile</h3>
+                    <p>Blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                            <line x1="6" y1="1" x2="6" y2="4"></line>
+                            <line x1="10" y1="1" x2="10" y2="4"></line>
+                            <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                    </div>
+                    <h3>Traiteur</h3>
+                    <p>Blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Événementiel</h3>
+                    <p>Blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarifs" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Grille tarifaire</h2>
+            <p class="section-subtitle">Prix par personne selon le nombre de convives et de services</p>
+            
+            <div class="pricing-image-wrapper">
+                <img src="images/grille-tarifs.png" alt="Grille tarifaire - Prix par personne">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <p class="section-subtitle">Miam miam phrase d"intro</p>
+            
+            <div class="about-content">
+                <div class="about-member">
+                    <div class="member-photo">
+                        <img src="images/julien.jpg" alt="Julien">
+                    </div>
+                    <h3>Julien</h3>
+                    <p class="member-role">Chef Cuisinier</p>
+                    <p class="member-bio">Blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla.</p>
+                </div>
+
+                <div class="about-member">
+                    <div class="member-photo">
+                        <img src="images/mathis.jpg" alt="Mathis">
+                    </div>
+                    <h3>Mathis</h3>
+                    <p class="member-role">Chef Cuisinier</p>
+                    <p class="member-bio">Blablabla cuisine blablabla blablabla cuisine blablabla blablabla cuisine blablabla blablabla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Discutons de votre prochain événement</p>
+            
+            <!-- Hidden iframe for Google Form submission -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            
+            <form class="contact-form" id="contactForm" 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeBLx6fsIHRhz5y4cVLpWAe1tyjKXXcsZkHcomrt2NYUSMxJg/formResponse" 
+                method="POST" 
+                target="hidden_iframe"
+                onsubmit="showConfirmation()">
+                
+                <div class="form-group">
+                    <label for="nom">Quel est votre nom? *</label>
+                    <input type="text" id="nom" name="entry.2063963856" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Quelle date voulez-vous réserver? *</label>
+                    <input type="date" id="date" required>
+                    <input type="hidden" name="entry.1791084450_year" id="date_year">
+                    <input type="hidden" name="entry.1791084450_month" id="date_month">
+                    <input type="hidden" name="entry.1791084450_day" id="date_day">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="personnes">Nombre de personnes *</label>
+                        <select id="personnes" name="entry.1027012894" required>
+                            <option value="" disabled selected>Sélectionnez</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13+">13+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="services">Nombre de services *</label>
+                        <select id="services" name="entry.728666320" required>
+                            <option value="" disabled selected>Sélectionnez</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motif">Quel est le motif de la réservation? *</label>
+                    <input type="text" id="motif" name="entry.1910446800" placeholder="ex: souper de famille, souper client, party de bureau..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferences">Préférences, envies ou aliments à éviter? *</label>
+                    <textarea id="preferences" name="entry.124189487" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="piquant">Tolérance au piquant (1 = très faible, 10 = très bonne) *</label>
+                    <select id="piquant" name="entry.544236350" required>
+                        <option value="" disabled selected>Sélectionnez</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Comment pouvons-nous vous contacter? *</label>
+                    <input type="text" id="contact" name="entry.933992159" placeholder="Téléphone ou courriel" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-submit">Envoyer ma demande</button>
+            </form>
+            
+            <div id="formConfirmation" class="form-confirmation" style="display: none;">
+                <div class="confirmation-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3>Merci!</h3>
+                    <p>Votre demande a été envoyée
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-logo">
+                    <img src="images/Logo coloris/Ardence-logo_Ardence_Blanc.png" alt="Ardence">
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:infoardence@gmail.com" class="footer-email">infoardence@gmail.com</a>
+                    <a href="https://instagram.com/ardence" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ardence. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
