@@ -379,16 +379,88 @@ h1, h2, h3, h4 {
     background-color: var(--color-white);
 }
 
-.pricing-image-wrapper {
+.pricing-table-wrapper {
     max-width: 700px;
     margin: 0 auto;
-    text-align: center;
+    position: relative;
 }
 
-.pricing-image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.table-header-label {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+}
+
+.table-side-label {
+    position: absolute;
+    left: -0.1rem;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pricing-table {
+    border-collapse: collapse;
+    background-color: var(--color-cream);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-family: var(--font-body);
+}
+
+.pricing-table thead th {
+    background-color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.pricing-table th.corner-cell {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.pricing-table .row-header {
+    background-color: rgba(0, 0, 0, 0.03);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-black);
+    white-space: nowrap;
+}
+
+.pricing-table tbody td:not(.row-header) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pricing-table tbody tr:nth-child(even) td:not(.row-header) {
+    background-color: var(--color-white);
+}
+
+.pricing-table .price {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-burgundy);
 }
 
 /* =============================================
@@ -799,6 +871,24 @@ h1, h2, h3, h4 {
     
     .pricing {
         padding: var(--spacing-lg) 0;
+    }
+    
+    .pricing-table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.75rem 1rem;
+    }
+    
+    .pricing-table .price {
+        font-size: 1.1rem;
+    }
+    
+    .table-side-label {
+        font-size: 0.9rem;
+        left: -0.25rem;
     }
     
     .about {
