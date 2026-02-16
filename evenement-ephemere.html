@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Évènement éphémère Ardence - Soupers immersifs pensés de A à Z.">
+    <meta name="theme-color" content="#6B1118">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Ardence | Évènement éphémère</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Pastille/Ardence-favicon-cropped.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil Ardence">
+                <img src="images/Pastille/Ardence-logo_Ardence-Icone_Bourgogne.png" alt="Ardence">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contactez-nous</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="service-page-hero">
+        <div class="container service-page-hero-content">
+            <h1>Évènement éphémère</h1>
+            <p>Ardence conçoit des soupers immersifs en salles privées ou en collaboration avec d'autres restaurateurs.</p>
+            <a href="#details" class="btn btn-primary hero-services-btn">Voir les détails</a>
+        </div>
+    </section>
+
+    <section id="details" class="service-page-details">
+        <div class="container">
+            <h2 class="section-title">Une expérience pensée de A à Z</h2>
+            <p class="section-subtitle">Du papier qui compose le menu à l'éclairage, chaque détail est réfléchi.</p>
+            <div class="service-page-copy">
+                <p>Ardence n'hésite pas à travailler avec des potiers et des potières pour embellir les soupers et créer un moment unique.</p>
+            </div>
+            <div class="pricing-notes">
+                <p><strong>Aucun événement à venir.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Parlez-nous de votre idée, on peut bâtir quelque chose de sur mesure.</p>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+            <form class="contact-form" id="contactForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeBLx6fsIHRhz5y4cVLpWAe1tyjKXXcsZkHcomrt2NYUSMxJg/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                onsubmit="showConfirmation()">
+
+                <div class="form-group">
+                    <label for="nom">Quel est votre nom? *</label>
+                    <input type="text" id="nom" name="entry.2063963856" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Quelle date voulez-vous réserver? *</label>
+                    <input type="date" id="date" required>
+                    <input type="hidden" name="entry.1791084450_year" id="date_year">
+                    <input type="hidden" name="entry.1791084450_month" id="date_month">
+                    <input type="hidden" name="entry.1791084450_day" id="date_day">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="personnes">Nombre de personnes *</label>
+                        <select id="personnes" name="entry.1027012894" required>
+                            <option value="" disabled selected>Sélectionnez</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13+">13+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="services">Nombre de services *</label>
+                        <select id="services" name="entry.728666320" required>
+                            <option value="" disabled selected>Sélectionnez</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motif">Quel est le motif de la réservation? *</label>
+                    <input type="text" id="motif" name="entry.1910446800" placeholder="ex: souper de famille, souper client, party de bureau..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferences">Préférences, envies ou aliments à éviter? *</label>
+                    <textarea id="preferences" name="entry.124189487" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="piquant">Tolérance au piquant (1 = très faible, 10 = très bonne) *</label>
+                    <select id="piquant" name="entry.544236350" required>
+                        <option value="" disabled selected>Sélectionnez</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-method">Comment pouvons-nous vous contacter? *</label>
+                    <input type="text" id="contact-method" name="entry.933992159" placeholder="Téléphone ou courriel" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Envoyer ma demande</button>
+            </form>
+
+            <div id="formConfirmation" class="form-confirmation" style="display: none;">
+                <div class="confirmation-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3>Merci!</h3>
+                    <p>Votre demande a été envoyée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#apropos">À propos</a></li>
+                        <li><a href="#contact">Contactez-nous</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-logo">
+                    <img src="images/Logo coloris/Ardence-logo_Ardence_Blanc.png" alt="Ardence">
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:infoardence@gmail.com" class="footer-email">infoardence@gmail.com</a>
+                    <a href="https://instagram.com/arden.ce" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ardence. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
