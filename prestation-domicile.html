@@ -130,32 +130,29 @@
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
             <form class="contact-form" id="contactForm"
-                action="https://docs.google.com/forms/d/e/1FAIpQLSeBLx6fsIHRhz5y4cVLpWAe1tyjKXXcsZkHcomrt2NYUSMxJg/formResponse"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdQaS5m3HCcvg9p-InmpPHsip3_pwdD4vsGW3D1k7qZF-ph6w/formResponse"
                 method="POST"
                 target="hidden_iframe"
                 onsubmit="showConfirmation()">
 
                 <div class="form-group">
                     <label for="nom">Quel est votre nom? *</label>
-                    <input type="text" id="nom" name="entry.2063963856" required>
+                    <input type="text" id="nom" name="entry.1664952927" required>
                 </div>
 
                 <div class="form-group">
                     <label for="date">Quelle date voulez-vous réserver? *</label>
                     <input type="date" id="date" required>
-                    <input type="hidden" name="entry.1791084450_year" id="date_year">
-                    <input type="hidden" name="entry.1791084450_month" id="date_month">
-                    <input type="hidden" name="entry.1791084450_day" id="date_day">
+                    <input type="hidden" name="entry.1447117014_year" id="date_year">
+                    <input type="hidden" name="entry.1447117014_month" id="date_month">
+                    <input type="hidden" name="entry.1447117014_day" id="date_day">
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="personnes">Nombre de personnes *</label>
-                        <select id="personnes" name="entry.1027012894" required>
+                        <select id="personnes" name="entry.1216089138" required>
                             <option value="" disabled selected>Sélectionnez</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                             <option value="6">6</option>
@@ -170,7 +167,7 @@
                     </div>
                     <div class="form-group">
                         <label for="services">Nombre de services *</label>
-                        <select id="services" name="entry.728666320" required>
+                        <select id="services" name="entry.1974403019" required>
                             <option value="" disabled selected>Sélectionnez</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -182,18 +179,23 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="motif">Quel est le motif de la réservation? *</label>
-                    <input type="text" id="motif" name="entry.1910446800" placeholder="ex: souper de famille, souper client, party de bureau..." required>
+                    <label for="motif">Quel est le motif de la réservation? (ex: souper de famille, souper client, party de bureau, etc.)</label>
+                    <input type="text" id="motif" name="entry.454825650" placeholder="ex: souper de famille, souper client, party de bureau...">
                 </div>
 
                 <div class="form-group">
-                    <label for="preferences">Préférences, envies ou aliments à éviter? *</label>
-                    <textarea id="preferences" name="entry.124189487" rows="3" required></textarea>
+                    <label for="preferences">Avez-vous des allergènes/restrictions alimentaires? *</label>
+                    <textarea id="preferences" name="entry.253551984" rows="3" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="piquant">Tolérance au piquant (1 = très faible, 10 = très bonne) *</label>
-                    <select id="piquant" name="entry.544236350" required>
+                    <label for="envies">Avez-vous des préférences ou des envies, ou des aliments que vous ne souhaitez pas manger? *</label>
+                    <textarea id="envies" name="entry.89597512" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="piquant">Quelle est votre tolérance au piquant? (1 = très faible, 10 = très bonne)</label>
+                    <select id="piquant" name="entry.2038325141">
                         <option value="" disabled selected>Sélectionnez</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -209,8 +211,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contact-method">Comment pouvons-nous vous contacter? *</label>
-                    <input type="text" id="contact-method" name="entry.933992159" placeholder="Téléphone ou courriel" required>
+                    <label for="contact">Comment pouvons-nous vous contacter? *</label>
+                    <input type="text" id="contact" name="entry.1792492019" placeholder="Téléphone ou courriel" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-submit">Envoyer ma demande</button>
