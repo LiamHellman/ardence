@@ -575,6 +575,10 @@ h1, h2, h3, h4 {
     background-color: var(--color-gray-light);
 }
 
+.about .section-title {
+    margin-bottom: var(--spacing-xl);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -747,7 +751,7 @@ h1, h2, h3, h4 {
    FOOTER
    ============================================= */
 .footer {
-    background-color: var(--color-burgundy);
+    background-color: var(--color-black);
     color: var(--color-white);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
@@ -835,8 +839,8 @@ h1, h2, h3, h4 {
 }
 
 .footer-social:hover {
-    background-color: var(--color-red);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 .footer-bottom {
