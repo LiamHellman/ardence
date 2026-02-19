@@ -129,12 +129,95 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe service cards and about members for animation
-    document.querySelectorAll('.service-card, .about-member').forEach(el => {
-        el.classList.add('animate-on-scroll');
-        observer.observe(el);
+    // Observe key content blocks with subtle staggered reveal
+    const revealGroups = [
+        { selector: '.section-title', step: 0.06 },
+        { selector: '.section-subtitle', step: 0.08 },
+        { selector: '.service-card', step: 0.08 },
+        { selector: '.about-member', step: 0.10 },
+        { selector: '.pricing-table-wrapper, .pricing-notes, .service-page-copy, .contact-form, .footer-content', step: 0.06 },
+        { selector: '.service-gallery-item', step: 0.07 }
+    ];
+
+    revealGroups.forEach(group => {
+        document.querySelectorAll(group.selector).forEach((el, index) => {
+            if (el.classList.contains('animate-on-scroll')) return;
+            el.classList.add('animate-on-scroll');
+            el.style.transitionDelay = `${Math.min(index * group.step, 0.42)}s`;
+            observer.observe(el);
+        });
     });
-    
+
+    // =============================================
+    // Align pricing notes with actual table width
+    // =============================================
+    function syncPricingNotesAlignment() {
+        document.querySelectorAll('.pricing').forEach(section => {
+            const table = section.querySelector('.pricing-table');
+            const notes = section.querySelector('.pricing-notes');
+            if (!table || !notes) return;
+
+            const tableWidth = Math.round(table.getBoundingClientRect().width);
+            if (tableWidth > 0) {
+                notes.style.width = `${tableWidth}px`;
+                notes.style.maxWidth = '100%';
+            }
+        });
+    }
+
+    syncPricingNotesAlignment();
+    window.addEventListener('resize', syncPricingNotesAlignment, { passive: true });
+
+    // =============================================
+    // Pricing table targeted highlight behavior
+    // =============================================
+    document.querySelectorAll('.pricing-table').forEach(table => {
+        const bodyRows = Array.from(table.querySelectorAll('tbody tr'));
+
+        function clearActiveCells() {
+            table.querySelectorAll('td.pricing-active').forEach(cell => {
+                cell.classList.remove('pricing-active');
+            });
+        }
+
+        function highlightColumn(colIndex) {
+            bodyRows.forEach(row => {
+                const cell = row.cells[colIndex];
+                if (cell && !cell.classList.contains('row-header')) {
+                    cell.classList.add('pricing-active');
+                }
+            });
+        }
+
+        function highlightRow(row) {
+            Array.from(row.cells).forEach(cell => {
+                if (!cell.classList.contains('row-header')) {
+                    cell.classList.add('pricing-active');
+                }
+            });
+        }
+
+        table.addEventListener('mouseover', function(e) {
+            const cell = e.target.closest('th, td');
+            if (!cell || !table.contains(cell)) return;
+            clearActiveCells();
+
+            // Hovering people columns in header (4/5/6/7)
+            if (cell.tagName === 'TH' && cell.parentElement.parentElement.tagName === 'THEAD' && cell.cellIndex > 0) {
+                highlightColumn(cell.cellIndex);
+                return;
+            }
+
+            // Hovering service-range row header (4 à 6 / 7 à 9 / 10 à 12)
+            if (cell.tagName === 'TD' && cell.classList.contains('row-header')) {
+                highlightRow(cell.parentElement);
+                return;
+            }
+        });
+
+        table.addEventListener('mouseleave', clearActiveCells);
+    });
+
     // =============================================
     // Google Form Date Field Handler
     // =============================================
@@ -157,25 +240,14 @@ const style = document.createElement('style');
 style.textContent = `
     .animate-on-scroll {
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transform: translateY(22px) scale(0.995);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+        will-change: opacity, transform;
     }
     
     .animate-on-scroll.visible {
         opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .service-card.animate-on-scroll:nth-child(2) {
-        transition-delay: 0.1s;
-    }
-    
-    .service-card.animate-on-scroll:nth-child(3) {
-        transition-delay: 0.2s;
-    }
-    
-    .about-member.animate-on-scroll:nth-child(2) {
-        transition-delay: 0.15s;
+        transform: translateY(0) scale(1);
     }
     
     .form-group input.error,
