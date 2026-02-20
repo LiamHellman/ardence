@@ -4,6 +4,83 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // =============================================
+    // Theme Toggle (Light / Dark)
+    // =============================================
+    const themeToggle = document.querySelector('.theme-toggle');
+    const root = document.documentElement;
+    const isEnglishPage = document.documentElement.lang === 'en';
+
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+            themeToggle.textContent = theme === 'dark' ? '☀' : '☾';
+            themeToggle.setAttribute(
+                'aria-label',
+                theme === 'dark'
+                    ? (isEnglishPage ? 'Enable light mode' : 'Activer le mode clair')
+                    : (isEnglishPage ? 'Enable dark mode' : 'Activer le mode sombre')
+            );
+            themeToggle.setAttribute(
+                'title',
+                theme === 'dark'
+                    ? (isEnglishPage ? 'Light mode' : 'Mode clair')
+                    : (isEnglishPage ? 'Dark mode' : 'Mode sombre')
+            );
+        }
+    }
+
+    const savedTheme = localStorage.getItem('ardence-theme');
+    const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(savedTheme || (systemDark ? 'dark' : 'light'));
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem('ardence-theme', next);
+        });
+    }
+
+    // =============================================
+    // Nav dropdown (language + theme)
+    // =============================================
+    const navActions = document.querySelector('.nav-actions');
+    const navMoreToggle = document.querySelector('.nav-more-toggle');
+
+    function closeNavDropdown() {
+        if (!navActions || !navMoreToggle) return;
+        navActions.classList.remove('open');
+        navMoreToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (navActions && navMoreToggle) {
+        navMoreToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const willOpen = !navActions.classList.contains('open');
+            navActions.classList.toggle('open', willOpen);
+            navMoreToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+
+        navActions.querySelectorAll('.nav-dropdown-item').forEach(item => {
+            item.addEventListener('click', closeNavDropdown);
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!navActions.contains(e.target)) {
+                closeNavDropdown();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeNavDropdown();
+            }
+        });
+    }
+
     
     // =============================================
     // Mobile Navigation Toggle
@@ -217,6 +294,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
         table.addEventListener('mouseleave', clearActiveCells);
     });
+
+    // =============================================
+    // Gallery lightbox popout
+    // =============================================
+    const galleryImages = document.querySelectorAll('.service-gallery-item img');
+    if (galleryImages.length) {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        overlay.innerHTML = `
+            <button class="lightbox-close" aria-label="${isEnglishPage ? 'Close image' : "Fermer l'image"}">&times;</button>
+            <div class="lightbox-content">
+                <img class="lightbox-image" alt="">
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        const lightboxImg = overlay.querySelector('.lightbox-image');
+        const closeBtn = overlay.querySelector('.lightbox-close');
+
+        function closeLightbox() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || (isEnglishPage ? 'Gallery image' : 'Image galerie');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        galleryImages.forEach(img => {
+            img.tabIndex = 0;
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', isEnglishPage ? 'Open full image' : 'Ouvrir l’image en grand');
+
+            img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(img.currentSrc || img.src, img.alt);
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        overlay.addEventListener('click', e => {
+            if (e.target === overlay) closeLightbox();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
 
     // =============================================
     // Google Form Date Field Handler

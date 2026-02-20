@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ardence cocktail receptions - elegant bites and refined platters for your events.">
+    <meta name="theme-color" content="#6B1118">
+    <title>Ardence | Cocktail reception</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../images/Pastille/Ardence-favicon-cropped.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="nav-logo"><img src="../images/Pastille/Ardence-logo_Ardence-Icone_Bourgogne.png" alt="Ardence"></a>
+            <ul class="nav-menu">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact us</a></li>
+                <li class="nav-actions">
+                    <button type="button" class="nav-more-toggle" aria-label="More options" aria-haspopup="true" aria-expanded="false">⋮</button>
+                    <div class="nav-dropdown">
+                        <a href="/cocktail-dinatoire.html" class="nav-dropdown-item">FR</a>
+                        <button type="button" class="nav-dropdown-item theme-toggle" aria-pressed="false">Dark mode</button>
+                    </div>
+                </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="service-page-hero">
+        <div class="container service-page-hero-content">
+            <h1>Cocktail reception</h1>
+            <p>Ardence creates elegant bites and charcuterie platters designed for your occasion.</p>
+            <a href="#details" class="btn btn-primary hero-services-btn">View details</a>
+        </div>
+    </section>
+
+    <section id="details" class="service-page-details">
+        <div class="container">
+            <h2 class="section-title">A cocktail in your image</h2>
+            <p class="section-subtitle">Whether it's an office party, a chic event or a product launch, we will satisfy your wishes.</p>
+            <div class="service-page-copy">
+                <p>The rate varies according to the type of event. Please contact us privately for a proposal adapted to your format.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact us</h2>
+            <p class="section-subtitle">Tell us about your event, we'll get back to you quickly.</p>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdQaS5m3HCcvg9p-InmpPHsip3_pwdD4vsGW3D1k7qZF-ph6w/formResponse" method="POST" target="hidden_iframe" onsubmit="showConfirmation()">
+                <div class="form-group"><label for="nom">What is your name? *</label><input type="text" id="nom" name="entry.1664952927" required></div>
+                <div class="form-group"><label for="date">What date would you like to book? *</label><input type="date" id="date" required><input type="hidden" name="entry.1447117014_year" id="date_year"><input type="hidden" name="entry.1447117014_month" id="date_month"><input type="hidden" name="entry.1447117014_day" id="date_day"></div>
+                <div class="form-row">
+                    <div class="form-group"><label for="personnes">Number of people *</label><select id="personnes" name="entry.1216089138" required><option value="" disabled selected>Select</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13+">13+</option></select></div>
+                    <div class="form-group"><label for="services-form">Number of services *</label><select id="services-form" name="entry.1974403019" required><option value="" disabled selected>Select</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div>
+                </div>
+                <div class="form-group"><label for="motif">What is the reason for the booking? (e.g. family dinner, client dinner, office party, etc.)</label><input type="text" id="motif" name="entry.454825650" placeholder="e.g. family dinner, client dinner, office party..."></div>
+                <div class="form-group"><label for="preferences">Allergies or dietary restrictions? *</label><textarea id="preferences" name="entry.253551984" rows="3" required></textarea></div>
+                <div class="form-group"><label for="envies">Preferences or ingredients to avoid? *</label><textarea id="envies" name="entry.89597512" rows="3" required></textarea></div>
+                <div class="form-group"><label for="piquant">What is your spice tolerance? (1 = very low, 10 = very good)</label><select id="piquant" name="entry.2038325141"><option value="" disabled selected>Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div>
+                <div class="form-group"><label for="contact-method">How can we contact you? *</label><input type="text" id="contact-method" name="entry.1792492019" required></div>
+                <button type="submit" class="btn btn-primary btn-submit">Send my request</button>
+            </form>
+            <div id="formConfirmation" class="form-confirmation" style="display:none;"><div class="confirmation-content"><h3>Thank you!</h3><p>Your request has been sent.</p></div></div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-nav"><h4>Navigation</h4><ul><li><a href="/en/">Home</a></li><li><a href="/en/#services">Services</a></li><li><a href="/en/#about">About</a></li><li><a href="#contact">Contact us</a></li></ul></div><div class="footer-logo"><img src="../images/Logo coloris/Ardence-logo_Ardence_Blanc.png" alt="Ardence"></div><div class="footer-contact"><h4>Contact</h4><a href="mailto:infoardence@gmail.com" class="footer-email">infoardence@gmail.com</a><a href="https://instagram.com/arden.ce" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></div></div><div class="footer-bottom"><p>&copy; 2026 Ardence. All rights reserved.</p></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>

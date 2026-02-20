@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ardence - Catering, in-home dining, and event experiences.">
+    <meta name="theme-color" content="#6B1118">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Ardence</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../images/Pastille/Ardence-favicon-cropped.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">
+                <img src="../images/Pastille/Ardence-logo_Ardence-Icone_Bourgogne.png" alt="Ardence">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#tarifs" class="nav-link">Rates</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact us</a></li>
+                <li class="nav-actions">
+                    <button type="button" class="nav-more-toggle" aria-label="More options" aria-haspopup="true" aria-expanded="false">⋮</button>
+                    <div class="nav-dropdown">
+                        <a href="/" class="nav-dropdown-item" aria-label="Passer en français">FR</a>
+                        <button type="button" class="nav-dropdown-item theme-toggle" aria-pressed="false">Dark mode</button>
+                    </div>
+                </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <img src="../images/Logo coloris/Ardence-logo_Ardence_Blanc_resized.png" alt="Ardence" class="hero-logo">
+            <a href="#services" class="btn btn-primary hero-services-btn">Our services</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Refined cuisine and a tailored experience.</p>
+
+            <div class="services-grid">
+                <a href="prestation-domicile.html" class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>In-home dining</h3>
+                    <p>Ardence comes to your home to offer a gastronomic experience to your guests. A personalized tasting menu for your guests, ranging from $80 to $125 per person.</p>
+                    <span class="service-page-link">View page</span>
+                </a>
+
+                <a href="cocktail-dinatoire.html" class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                            <line x1="6" y1="1" x2="6" y2="4"></line>
+                            <line x1="10" y1="1" x2="10" y2="4"></line>
+                            <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                    </div>
+                    <h3>Cocktail reception</h3>
+                    <p>Ardence designs elegant bites and charcuterie platters tailored to your occasion.</p>
+                    <span class="service-page-link">View page</span>
+                </a>
+
+                <a href="evenement-ephemere.html" class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Pop-up events</h3>
+                    <p>Dinners hosted by Ardence or in collaboration with other restaurateurs.</p>
+                    <span class="service-page-link">View page</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">In-home dining</h2>
+            <p class="section-subtitle">Ardence comes to your home to offer a gastronomic experience to your guests. We design a personalized menu according to your preferences.</p>
+
+            <div class="pricing-table-wrapper">
+                <div class="table-container">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th class="corner-cell">
+                                    <span class="corner-top">Courses</span>
+                                    <span class="corner-bottom">Guests</span>
+                                </th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-header">4 to 6</td>
+                                <td><span class="price">$100</span></td>
+                                <td><span class="price">$110</span></td>
+                                <td><span class="price">$115</span></td>
+                                <td><span class="price">$125</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row-header">7 to 9</td>
+                                <td><span class="price">$90</span></td>
+                                <td><span class="price">$100</span></td>
+                                <td><span class="price">$105</span></td>
+                                <td><span class="price">$115</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row-header">10 to 12</td>
+                                <td><span class="price">$80</span></td>
+                                <td><span class="price">$90</span></td>
+                                <td><span class="price">$95</span></td>
+                                <td><span class="price">$105</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pricing-notes">
+                <p>+$25 total for a food and wine pairing proposal.</p>
+                <p>* Travel fees apply at $0.50/km starting at 20 km.</p>
+                <p>** For events outside these rates, contact us privately and we will find a custom solution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-member">
+                    <div class="member-photo">
+                        <img src="../images/mathis.jpg" alt="Mathis">
+                    </div>
+                    <h3>Mathis</h3>
+                    <p class="member-role">Chef</p>
+                    <p class="member-bio">Mathis refined his instinct, product knowledge, and modern generosity at Mon Lapin, ranked 2nd best restaurant in North America, then immersed himself in the creative world of Chez Jean-Paul.</p>
+                </div>
+                <div class="about-member">
+                    <div class="member-photo">
+                        <img src="../images/julien.jpg" alt="Julien">
+                    </div>
+                    <h3>Julien</h3>
+                    <p class="member-role">Chef</p>
+                    <p class="member-bio">Julien first immersed himself in Sabayon's Michelin world, under the influence of Patrice Demers, then plunged into the heart of the high boreal technicality of La Tanière in Quebec City - a laboratory where terroir, fermentation and innovation meet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact us</h2>
+            <p class="section-subtitle">Let's discuss your next event</p>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            <form class="contact-form" id="contactForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdQaS5m3HCcvg9p-InmpPHsip3_pwdD4vsGW3D1k7qZF-ph6w/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                onsubmit="showConfirmation()">
+                <div class="form-group">
+                    <label for="nom">What is your name? *</label>
+                    <input type="text" id="nom" name="entry.1664952927" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">What date would you like to book? *</label>
+                    <input type="date" id="date" required>
+                    <input type="hidden" name="entry.1447117014_year" id="date_year">
+                    <input type="hidden" name="entry.1447117014_month" id="date_month">
+                    <input type="hidden" name="entry.1447117014_day" id="date_day">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="personnes">Number of people *</label>
+                        <select id="personnes" name="entry.1216089138" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                            <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            <option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13+">13+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="services-form">Number of services *</label>
+                        <select id="services-form" name="entry.1974403019" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="motif">What is the reason for the booking? (e.g. family dinner, client dinner, office party, etc.)</label>
+                    <input type="text" id="motif" name="entry.454825650" placeholder="e.g. family dinner, client dinner, office party...">
+                </div>
+                <div class="form-group">
+                    <label for="preferences">Allergies or dietary restrictions? *</label>
+                    <textarea id="preferences" name="entry.253551984" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="envies">Preferences, cravings, or ingredients to avoid? *</label>
+                    <textarea id="envies" name="entry.89597512" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="piquant">Spice tolerance (1 = very low, 10 = very high)</label>
+                    <select id="piquant" name="entry.2038325141">
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                        <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-method">How can we contact you? *</label>
+                    <input type="text" id="contact-method" name="entry.1792492019" placeholder="Phone or email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Send my request</button>
+            </form>
+
+            <div id="formConfirmation" class="form-confirmation" style="display: none;">
+                <div class="confirmation-content">
+                    <h3>Thank you!</h3>
+                    <p>Your request has been sent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tarifs">Rates</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-logo">
+                    <img src="../images/Logo coloris/Ardence-logo_Ardence_Blanc.png" alt="Ardence">
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:infoardence@gmail.com" class="footer-email">infoardence@gmail.com</a>
+                    <a href="https://instagram.com/arden.ce" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ardence. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
