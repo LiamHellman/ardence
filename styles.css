@@ -628,6 +628,11 @@ h1, h2, h3, h4 {
     background-color: var(--color-gray-light);
 }
 
+.service-highlight {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-white);
+}
+
 .service-gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 280px);
